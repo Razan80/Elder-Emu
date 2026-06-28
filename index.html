@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <meta property="og:site_name" content="Elder Emu Home Care">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/elder-emu-logo-icon-only.png">
+  <meta property="og:image" content="images/Elder Emu Wordmark.jpg">
   <link rel="canonical" href="https://www.elderemuhomecare.com.au/index.html">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
@@ -35,7 +35,7 @@
     <div class="container">
       <nav class="navbar" aria-label="Primary">
         <a href="index.html" class="logo" aria-label="Elder Emu Home Care home">
-          <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" style="height:40px" />
+          <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" loading="lazy" />
           <span class="logo__text">
             <span class="logo__name">Elder Emu Home Care</span>
             <span class="logo__tag">Proudly Western Sydney</span>
@@ -67,7 +67,7 @@
 
   <!-- Hero -->
   <section class="hero" id="top">
-    <div class="hero__bg" aria-hidden="true"></div>
+    <!-- hero bg handled by CSS -->
     <div class="container">
       <div class="hero__inner">
         <div class="hero__card reveal">
@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="hero__art" aria-hidden="true">
-          <div class="hero__art-figure hero__art-figure--img" style="background-image:url('images/RN taking BP.jpg')">
+          <div class="hero__art-figure hero__art-figure--img" style="background-image:url('images/RN giving advice.jpg')">
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
     <div class="container" style="position:relative;z-index:1">
       <div class="split">
         <div class="split__img-wrap reveal" aria-hidden="true">
-          <img src="images/background1.jpg" alt="Daughter embracing elderly mother with nurse" loading="lazy" />
+          <img src="images/RN consulting.jpg" alt="Registered nurse consulting warmly with elderly client and family at home" loading="lazy" />
         </div>
         <div class="reveal">
           <span class="eyebrow">Built around you</span>
@@ -165,24 +165,36 @@
       </div>
       <div class="cards">
         <div class="card reveal">
+          <div class="card__img">
+            <img src="images/careworker vacuumming.jpg" alt="Care worker providing domestic cleaning assistance at home" loading="lazy">
+          </div>
           <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L24 8l18 14"/><path d="M11 19v19h26V19"/><path d="M20 38V28h8v10"/></svg>
           <h4>Home help &amp; domestic</h4>
           <p>Cleaning, laundry, meal prep and the everyday tasks that keep your home comfortable.</p>
           <a href="everyday-living.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="card reveal">
+          <div class="card__img">
+            <img src="images/careworker combing elder hair.jpg" alt="Care worker gently helping elderly woman with grooming" loading="lazy">
+          </div>
           <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="7"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13"/></svg>
           <h4>Personal care</h4>
           <p>Respectful help with showering, dressing, grooming and mobility — with dignity, always.</p>
           <a href="personal-care.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="card reveal">
+          <div class="card__img">
+            <img src="images/careworker helping elder out of car.jpg" alt="Care worker helping elderly client safely out of vehicle" loading="lazy">
+          </div>
           <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h12l3 8H11z"/><circle cx="16" cy="38" r="4"/><circle cx="32" cy="38" r="4"/><path d="M11 14l-3 18h32l-3-12H20"/></svg>
           <h4>Transport &amp; outings</h4>
           <p>Door-to-door rides to appointments, the shops, or a visit with friends across Sydney.</p>
           <a href="services.html#transport" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="card reveal">
+          <div class="card__img">
+            <img src="images/RN taking BP.jpg" alt="Registered nurse providing clinical nursing care at home" loading="lazy">
+          </div>
           <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-16-9.6-16-21a9 9 0 0 1 16-5.6A9 9 0 0 1 40 21c0 11.4-16 21-16 21z"/><path d="M16 22h5l2-4 3 8 2-4h4"/></svg>
           <h4>Clinical &amp; nursing</h4>
           <p>Registered nurses for medication, wound care, continence support and chronic conditions.</p>
@@ -219,14 +231,16 @@
           <div class="step__num">3</div>
           <h4>Meet your carers</h4>
           <p>We match you with local carers and introduce them before any care begins.</p>
-          <img src="images/ENRN sorting medicine.jpg" alt="Nurse sorting medication" style="margin-top:16px;border-radius:var(--radius);height:120px;width:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div class="step reveal"><div class="step__num">4</div><h4>Care that adapts</h4><p>Your coordinator checks in regularly and adjusts your support as your needs change.</p></div>
       </div>
       
-      <div class="reveal">
+      <div class="how-images reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;">
         <div class="how-image">
-          <img src="images/RN giving advice.jpg" alt="Family meeting with nurse at the dining table" loading="lazy" />
+          <img src="images/RN consulting.jpg" alt="Registered nurse consulting with elderly client and family at home" loading="lazy" />
+        </div>
+        <div class="how-image">
+          <img src="images/ENRN sorting medicine.jpg" alt="Nurse carefully organising medications as part of a client care plan" loading="lazy" />
         </div>
       </div>
     </div>
@@ -247,25 +261,15 @@
           </ul>
           <a href="funding.html" class="btn btn-primary btn-lg">Check my funding</a>
         </div>
-        <div class="funding__art" aria-hidden="true">
-          <svg viewBox="0 0 320 280">
-            <rect x="30" y="60" width="260" height="170" rx="16" fill="#f3f0e9"/>
-            <rect x="30" y="60" width="260" height="42" rx="16" fill="#176077"/>
-            <rect x="30" y="86" width="260" height="16" fill="#176077"/>
-            <circle cx="160" cy="160" r="46" fill="none" stroke="#ff6c00" stroke-width="14" stroke-dasharray="216 290" stroke-linecap="round" transform="rotate(-90 160 160)"/>
-            <text x="160" y="168" text-anchor="middle" font-family="Arial" font-size="30" fill="#2a2a2a" font-weight="bold">75%</text>
-            <rect x="64" y="120" width="40" height="8" rx="4" fill="#d0ccbf"/>
-            <rect x="216" y="120" width="40" height="8" rx="4" fill="#d0ccbf"/>
-            <rect x="64" y="200" width="60" height="8" rx="4" fill="#d0ccbf"/>
-            <rect x="196" y="200" width="60" height="8" rx="4" fill="#d0ccbf"/>
-          </svg>
+        <div class="funding__art">
+          <img src="images/RN changing bandage.jpg" alt="Registered nurse providing clinical wound care to elderly patient at home" loading="lazy" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-raised);object-fit:cover;max-height:320px;">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials with background -->
-  <section class="section testimonial--bg" style="background-image:url('images/RN consulting.jpg'); padding: 80px 0;">
+  <section class="section testimonial--bg" style="background-image:url('images/background2.jpg'); padding: 80px 0;">
     <div class="container">
       <div class="section__head reveal" style="color:white;">
         <span class="eyebrow" style="color:var(--sandstone)">What our clients say</span>
@@ -342,7 +346,7 @@
     <div class="container reveal">
       <h2>Proudly serving Greater Western Sydney</h2>
       <p>Parramatta · Blacktown · Penrith · Liverpool · Fairfield · Auburn · Merrylands · the Hills · and surrounding suburbs</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Check if we cover your suburb →</a>
+      <a href="contact.html" class="btn btn-ghost-light btn-lg">Check if we cover your suburb →</a>
     </div>
   </section>
 
@@ -352,7 +356,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="logo">
-            <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" style="height:40px" />
+            <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" loading="lazy" />
             <span class="logo__text"><span class="logo__name">Elder Emu Home Care</span><span class="logo__tag" style="color:#ffb27a">Proudly Western Sydney</span></span>
           </a>
           <p>Locally owned in-home aged care, helping older Australians live well at home — across Greater Western Sydney.</p>
