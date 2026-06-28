@@ -13,12 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="images/Elder Emu Logo.jpg" type="image/jpeg" />
+  <link
+    rel="preload"
+    as="image"
+    href="images/RN giving advice.jpg"
+    fetchpriority="high">
 </head>
 <body>
 
   <!-- Promo bar -->
   <div class="topbar">
-    🌿 New clients in June: <strong>$500 of complimentary care hours</strong> when you start a Home Care Package with us — <a href="contact.html">Enquire today</a>
+    🌿 New clients: <strong>$500 of complimentary care hours</strong> when you start with us this month — <a href="contact.html">Enquire today</a>
   </div>
 
   <!-- Header -->
@@ -35,7 +40,7 @@
     <div class="container">
       <nav class="navbar" aria-label="Primary">
         <a href="index.html" class="logo" aria-label="Elder Emu Home Care home">
-          <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" loading="lazy" />
+          <img src="images/Elder Emu Logo.jpg" alt="Elder Emu Home Care logo" class="logo__img" loading="eager" fetchpriority="high">
           <span class="logo__text">
             <span class="logo__name">Elder Emu Home Care</span>
             <span class="logo__tag">Proudly Western Sydney</span>
@@ -80,7 +85,12 @@
           </div>
         </div>
         <div class="hero__art" aria-hidden="true">
-          <div class="hero__art-figure hero__art-figure--img" style="background-image:url('images/RN giving advice.jpg')">
+          <div class="hero__art-figure">
+            <img
+              src="images/RN giving advice.jpg"
+              alt="Registered nurse giving warm professional advice to elderly client at home"
+              fetchpriority="high"
+              loading="eager">
           </div>
         </div>
       </div>
@@ -165,52 +175,102 @@
       </div>
       <div class="cards">
         <div class="card reveal">
-          <div class="card__img">
-            <img src="images/careworker vacuumming.jpg" alt="Care worker providing domestic cleaning assistance at home" loading="lazy">
+          <div class="card__media">
+            <img
+              src="images/careworker vacuumming.jpg"
+              alt="Care worker vacuuming elderly client's home as part of domestic assistance"
+              loading="lazy">
           </div>
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L24 8l18 14"/><path d="M11 19v19h26V19"/><path d="M20 38V28h8v10"/></svg>
-          <h4>Home help &amp; domestic</h4>
-          <p>Cleaning, laundry, meal prep and the everyday tasks that keep your home comfortable.</p>
-          <a href="everyday-living.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-        <div class="card reveal">
-          <div class="card__img">
-            <img src="images/careworker combing elder hair.jpg" alt="Care worker gently helping elderly woman with grooming" loading="lazy">
+          <div class="card__body">
+            <h4>Home help &amp; domestic</h4>
+            <p>Cleaning, laundry, meal prep and the everyday tasks that keep your home comfortable.</p>
+            <a href="everyday-living.html" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="7"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13"/></svg>
-          <h4>Personal care</h4>
-          <p>Respectful help with showering, dressing, grooming and mobility — with dignity, always.</p>
-          <a href="personal-care.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="card reveal">
-          <div class="card__img">
-            <img src="images/careworker helping elder out of car.jpg" alt="Care worker helping elderly client safely out of vehicle" loading="lazy">
+          <div class="card__media">
+            <img
+              src="images/careworker combing elder hair.jpg"
+              alt="Care worker gently helping elderly woman with hair grooming at home"
+              loading="lazy">
           </div>
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h12l3 8H11z"/><circle cx="16" cy="38" r="4"/><circle cx="32" cy="38" r="4"/><path d="M11 14l-3 18h32l-3-12H20"/></svg>
-          <h4>Transport &amp; outings</h4>
-          <p>Door-to-door rides to appointments, the shops, or a visit with friends across Sydney.</p>
-          <a href="services.html#transport" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-        <div class="card reveal">
-          <div class="card__img">
-            <img src="images/RN taking BP.jpg" alt="Registered nurse providing clinical nursing care at home" loading="lazy">
+          <div class="card__body">
+            <h4>Personal care</h4>
+            <p>Respectful help with showering, dressing, grooming and mobility — with dignity, always.</p>
+            <a href="personal-care.html" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-16-9.6-16-21a9 9 0 0 1 16-5.6A9 9 0 0 1 40 21c0 11.4-16 21-16 21z"/><path d="M16 22h5l2-4 3 8 2-4h4"/></svg>
-          <h4>Clinical &amp; nursing</h4>
-          <p>Registered nurses for medication, wound care, continence support and chronic conditions.</p>
-          <a href="nursing-care.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="card reveal">
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="16" r="6"/><circle cx="32" cy="18" r="5"/><path d="M6 40c0-7 5-11 12-11s12 4 12 11"/><path d="M30 40c0-5 4-8 9-8s9 3 9 8"/></svg>
-          <h4>Social &amp; companionship</h4>
-          <p>A friendly visit, a walk in the park, or help staying connected to your community.</p>
-          <a href="social-support.html" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="card__media">
+            <img
+              src="images/careworker helping elder out of car.jpg"
+              alt="Care worker helping elderly client safely out of vehicle for transport assistance"
+              loading="lazy">
+          </div>
+          <div class="card__body">
+            <h4>Transport &amp; outings</h4>
+            <p>Door-to-door rides to appointments, the shops, or a visit with friends across Sydney.</p>
+            <a href="services.html#transport" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </div>
         <div class="card reveal">
-          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c8 0 14 6 14 14 0 10-14 22-14 22S10 30 10 20C10 12 16 6 24 6z"/><path d="M18 30c-3 2-5 5-5 8M30 30c3 2 5 5 5 8"/></svg>
-          <h4>Allied health</h4>
-          <p>Physio, podiatry and occupational therapy to keep you steady, strong and independent.</p>
-          <a href="services.html#allied" class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="card__media">
+            <img
+              src="images/RN taking BP.jpg"
+              alt="Registered nurse taking blood pressure of elderly patient during home visit"
+              loading="lazy">
+          </div>
+          <div class="card__body">
+            <h4>Clinical &amp; nursing</h4>
+            <p>Registered nurses for medication, wound care, continence support and chronic conditions.</p>
+            <a href="nursing-care.html" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__media card__media--icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="16" r="6"/>
+              <circle cx="32" cy="18" r="5"/>
+              <path d="M6 40c0-7 5-11 12-11s12 4 12 11"/>
+              <path d="M30 40c0-5 4-8 9-8s9 3 9 8"/>
+            </svg>
+          </div>
+          <div class="card__body">
+            <h4>Social &amp; companionship</h4>
+            <p>A friendly visit, a walk in the park, or help staying connected to your community.</p>
+            <a href="social-support.html" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card__media card__media--icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 6c8 0 14 6 14 14 0 10-14 22-14 22S10 30 10 20C10 12 16 6 24 6z"/>
+              <path d="M18 30c-3 2-5 5-5 8M30 30c3 2 5 5 5 8"/>
+            </svg>
+          </div>
+          <div class="card__body">
+            <h4>Allied health</h4>
+            <p>Physio, podiatry and occupational therapy to keep you steady, strong and independent.</p>
+            <a href="services.html#allied" class="card__link">
+              Learn more
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -235,12 +295,13 @@
         <div class="step reveal"><div class="step__num">4</div><h4>Care that adapts</h4><p>Your coordinator checks in regularly and adjusts your support as your needs change.</p></div>
       </div>
       
-      <div class="how-images reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;">
-        <div class="how-image">
-          <img src="images/RN consulting.jpg" alt="Registered nurse consulting with elderly client and family at home" loading="lazy" />
-        </div>
-        <div class="how-image">
-          <img src="images/ENRN sorting medicine.jpg" alt="Nurse carefully organising medications as part of a client care plan" loading="lazy" />
+      <div class="how-image reveal">
+        <img
+          src="images/ENRN sorting medicine.jpg"
+          alt="Registered nurse carefully preparing and organising a client's medications at home as part of their personalised care plan"
+          loading="lazy">
+        <div class="how-image__caption">
+          Every care plan is tailored around you — reviewed regularly by your Registered Nurse and care coordinator.
         </div>
       </div>
     </div>
@@ -262,18 +323,21 @@
           <a href="funding.html" class="btn btn-primary btn-lg">Check my funding</a>
         </div>
         <div class="funding__art">
-          <img src="images/RN changing bandage.jpg" alt="Registered nurse providing clinical wound care to elderly patient at home" loading="lazy" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-raised);object-fit:cover;max-height:320px;">
+          <img
+            src="images/RN changing bandage.jpg"
+            alt="Registered nurse carefully changing wound dressing on elderly patient during home visit"
+            loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials with background -->
-  <section class="section testimonial--bg" style="background-image:url('images/background2.jpg'); padding: 80px 0;">
+  <section class="section testimonial--bg" style="background-image:url('images/background2.jpg')">
     <div class="container">
-      <div class="section__head reveal" style="color:white;">
-        <span class="eyebrow" style="color:var(--sandstone)">What our clients say</span>
-        <h2 style="color:white;">Hear from Western Sydney families</h2>
+      <div class="section__head reveal">
+        <span class="eyebrow">What our clients say</span>
+        <h2>Hear from Western Sydney families</h2>
       </div>
       <div class="testimonial-cards reveal">
         <div class="testimonial-card">
