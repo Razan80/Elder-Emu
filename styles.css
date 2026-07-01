@@ -223,8 +223,28 @@ p { margin: 0 0 1rem; }
 .eyebrow { display: inline-block; font-family: var(--font-medium); color: var(--accent); font-size: .82rem; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px; }
 
 /* ---------- Stat / trust bar ---------- */
-.trustbar { background: var(--brand-teal); color: #fff; }
-.trustbar__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 40px 0; text-align: center; }
+.trustbar {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(75% 130% at 12% 0%, rgba(255,108,0,.20), transparent 55%),
+    radial-gradient(65% 130% at 92% 100%, rgba(255,255,255,.08), transparent 50%),
+    linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+}
+.trustbar::before {
+  content: ""; position: absolute; inset: 0;
+  background: url('images/background2.jpg') center / cover no-repeat;
+  opacity: .05; pointer-events: none;
+}
+.trustbar__grid {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  padding: 44px 0; text-align: center;
+}
+.trustbar__grid > div:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,.14);
+}
 .trust__num { font-family: var(--font-display); font-weight: 300; font-size: 2.6rem; line-height: 1; }
 .trust__label { font-family: var(--font-medium); font-size: .92rem; color: rgba(255, 255, 255, .82); margin-top: 8px; }
 
@@ -399,8 +419,25 @@ p { margin: 0 0 1rem; }
 .stars { color: var(--accent); font-size: 1.4rem; letter-spacing: 4px; margin-bottom: 24px; }
 
 /* ---------- CTA band ---------- */
-.cta-band { background: var(--brand-teal); color: #fff; }
-.cta-band__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(70% 130% at 88% 0%, rgba(255,108,0,.22), transparent 55%),
+    radial-gradient(60% 130% at 8% 100%, rgba(255,255,255,.08), transparent 50%),
+    linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+}
+.cta-band::before {
+  content: ""; position: absolute; inset: 0;
+  background: url('images/background2.jpg') center / cover no-repeat;
+  opacity: .05; pointer-events: none;
+}
+.cta-band__inner {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
 .cta-band h2 { color: #fff; margin: 0; }
 .cta-band p { color: rgba(255, 255, 255, .82); margin: 8px 0 0; max-width: 52ch; }
 .cta-band__actions { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -421,7 +458,17 @@ p { margin: 0 0 1rem; }
 .faq__a p { color: var(--text-muted); padding: 0 4px 22px; margin: 0; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--text-primary); color: rgba(255, 255, 255, .72); padding: 64px 0 0; }
+.footer {
+  position: relative;
+  overflow: hidden;
+  color: rgba(255, 255, 255, .72);
+  padding: 64px 0 0;
+  background:
+    radial-gradient(60% 80% at 85% 0%, rgba(23,96,119,.35), transparent 60%),
+    radial-gradient(50% 70% at 10% 20%, rgba(255,108,0,.08), transparent 55%),
+    linear-gradient(160deg, #313131 0%, var(--text-primary) 55%);
+}
+.footer .container { position: relative; z-index: 1; }
 .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
 .footer__brand .logo__name { color: #fff; }
 .footer__brand p { font-size: .95rem; margin-top: 18px; max-width: 38ch; }
@@ -451,6 +498,9 @@ p { margin: 0 0 1rem; }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .card__media { height: 180px; }
+  /* 2-col trustbar: divider only between the two columns */
+  .trustbar__grid > div:not(:last-child) { border-right: 0; }
+  .trustbar__grid > div:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.14); }
 }
 @media (max-width: 767px) {
   .nav-links, .header__top-inner { display: none; }
@@ -465,6 +515,12 @@ p { margin: 0 0 1rem; }
   .cards { grid-template-columns: 1fr; }
   .card__media { height: 220px; }
   .card__media--icon { height: 140px; }
+  /* 1-col trustbar: use horizontal separators instead of vertical */
+  .trustbar__grid > div:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    padding-bottom: 20px;
+  }
   .hero__actions .btn, .cta-band__actions .btn { width: 100%; }
 }
 
