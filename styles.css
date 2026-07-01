@@ -228,9 +228,11 @@ p { margin: 0 0 1rem; }
   overflow: hidden;
   color: #fff;
   background:
-    radial-gradient(75% 130% at 12% 0%, rgba(255,108,0,.20), transparent 55%),
-    radial-gradient(65% 130% at 92% 100%, rgba(255,255,255,.08), transparent 50%),
-    linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+    radial-gradient(48% 85% at 10% 12%, rgba(255,108,0,.38), transparent 58%),   /* brand orange */
+    radial-gradient(46% 80% at 90% 8%, rgba(255,178,122,.32), transparent 58%),   /* warm peach */
+    radial-gradient(52% 95% at 78% 96%, rgba(45,203,72,.20), transparent 58%),    /* success green pop */
+    radial-gradient(50% 90% at 22% 92%, rgba(72,192,214,.34), transparent 58%),   /* bright cyan-teal */
+    linear-gradient(135deg, #1c7591 0%, var(--brand-teal) 58%, var(--brand-teal-dark) 100%);
 }
 .trustbar::before {
   content: ""; position: absolute; inset: 0;
@@ -424,9 +426,11 @@ p { margin: 0 0 1rem; }
   overflow: hidden;
   color: #fff;
   background:
-    radial-gradient(70% 130% at 88% 0%, rgba(255,108,0,.22), transparent 55%),
-    radial-gradient(60% 130% at 8% 100%, rgba(255,255,255,.08), transparent 50%),
-    linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+    radial-gradient(50% 90% at 88% 15%, rgba(255,108,0,.40), transparent 58%),    /* brand orange */
+    radial-gradient(46% 82% at 12% 10%, rgba(255,178,122,.30), transparent 58%),   /* warm peach */
+    radial-gradient(52% 95% at 20% 95%, rgba(45,203,72,.20), transparent 58%),     /* success green pop */
+    radial-gradient(50% 90% at 80% 95%, rgba(72,192,214,.34), transparent 58%),    /* bright cyan-teal */
+    linear-gradient(135deg, #1c7591 0%, var(--brand-teal) 58%, var(--brand-teal-dark) 100%);
 }
 .cta-band::before {
   content: ""; position: absolute; inset: 0;
@@ -461,12 +465,13 @@ p { margin: 0 0 1rem; }
 .footer {
   position: relative;
   overflow: hidden;
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .78);
   padding: 64px 0 0;
   background:
-    radial-gradient(60% 80% at 85% 0%, rgba(23,96,119,.35), transparent 60%),
-    radial-gradient(50% 70% at 10% 20%, rgba(255,108,0,.08), transparent 55%),
-    linear-gradient(160deg, #313131 0%, var(--text-primary) 55%);
+    radial-gradient(55% 75% at 88% 5%, rgba(72,192,214,.28), transparent 60%),   /* bright cyan-teal */
+    radial-gradient(48% 70% at 8% 12%, rgba(255,108,0,.18), transparent 58%),     /* brand orange */
+    radial-gradient(50% 80% at 95% 95%, rgba(255,178,122,.12), transparent 60%),  /* warm peach */
+    linear-gradient(160deg, #12414f 0%, #1b2b30 45%, var(--text-primary) 100%);
 }
 .footer .container { position: relative; z-index: 1; }
 .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
