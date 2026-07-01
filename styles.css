@@ -187,9 +187,13 @@ p { margin: 0 0 1rem; }
 }
 .hero__inner { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; min-height: 460px; align-items: center; gap: 32px; }
 .hero__card {
-  background: rgba(42, 42, 42, .9); color: #fff;
+  background: linear-gradient(150deg, rgba(23,96,119,.86) 0%, rgba(12,54,68,.92) 100%);
+  color: #fff;
   padding: 34px 38px 38px; border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-float); max-width: 520px; margin: 30px 0;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: var(--shadow-float), inset 0 1px 0 rgba(255,255,255,.10);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  max-width: 520px; margin: 30px 0;
 }
 .hero__card h1 { font-size: clamp(2rem, 3.8vw, 3.1rem); }
 .hero__eyebrow { font-family: var(--font-medium); color: #ffb27a; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 18px; }
