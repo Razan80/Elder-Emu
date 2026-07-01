@@ -223,8 +223,28 @@ p { margin: 0 0 1rem; }
 .eyebrow { display: inline-block; font-family: var(--font-medium); color: var(--accent); font-size: .82rem; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px; }
 
 /* ---------- Stat / trust bar ---------- */
-.trustbar { background: var(--brand-teal); color: #fff; }
-.trustbar__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 40px 0; text-align: center; }
+.trustbar {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(75% 130% at 12% 0%, rgba(255,108,0,.20), transparent 55%),
+    radial-gradient(65% 130% at 92% 100%, rgba(255,255,255,.08), transparent 50%),
+    linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
+}
+.trustbar::before {
+  content: ""; position: absolute; inset: 0;
+  background: url('images/background2.jpg') center / cover no-repeat;
+  opacity: .05; pointer-events: none;
+}
+.trustbar__grid {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  padding: 44px 0; text-align: center;
+}
+.trustbar__grid > div:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,.14);
+}
 .trust__num { font-family: var(--font-display); font-weight: 300; font-size: 2.6rem; line-height: 1; }
 .trust__label { font-family: var(--font-medium); font-size: .92rem; color: rgba(255, 255, 255, .82); margin-top: 8px; }
 
@@ -451,6 +471,9 @@ p { margin: 0 0 1rem; }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .card__media { height: 180px; }
+  /* 2-col trustbar: divider only between the two columns */
+  .trustbar__grid > div:not(:last-child) { border-right: 0; }
+  .trustbar__grid > div:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.14); }
 }
 @media (max-width: 767px) {
   .nav-links, .header__top-inner { display: none; }
@@ -465,6 +488,12 @@ p { margin: 0 0 1rem; }
   .cards { grid-template-columns: 1fr; }
   .card__media { height: 220px; }
   .card__media--icon { height: 140px; }
+  /* 1-col trustbar: use horizontal separators instead of vertical */
+  .trustbar__grid > div:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    padding-bottom: 20px;
+  }
   .hero__actions .btn, .cta-band__actions .btn { width: 100%; }
 }
 
